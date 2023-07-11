@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="ABS-CBN_IMP_PUSH_Automation" />
+        <module name="ABS-CBN_IMP_ENT_Automation" />
       </profile>
     </annotationProcessing>
   </component>
