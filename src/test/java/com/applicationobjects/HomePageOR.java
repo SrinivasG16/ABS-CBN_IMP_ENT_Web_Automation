@@ -21,13 +21,13 @@ public class HomePageOR {
     @FindBy(xpath="//div[contains(text(),'Photos')]")
     public WebElement lnk_hdr_Photos;
 
-    @FindBy(xpath="//div[@class='MuiBox-root css-18biwo'][normalize-space()='Videos']")
+    @FindBy(xpath="//div[text()='Videos']")
     public WebElement lnk_hdr_Videos;
 
     @FindBy(xpath="//div[contains(text(),'Articles')]")
     public WebElement lnk_hdr_Articles;
 
-    @FindBy(xpath="//div[@class='MuiBox-root css-18biwo'][normalize-space()='Kapamilya']")
+    @FindBy(xpath="//div[text()='Kapamilya']")
     public WebElement lnk_hdr_Kapamilya;
 
     @FindBy(xpath="//div[contains(text(),'Get Tickets')]")
