@@ -61,4 +61,5 @@ public class Photos extends GenericMethods {
         availableImage("Home", "Photos", "See more", PhotosOR.btn_seemore_photos);
     }
 
+
 }

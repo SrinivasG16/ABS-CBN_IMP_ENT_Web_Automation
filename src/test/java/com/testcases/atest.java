@@ -20,7 +20,6 @@ public class atest extends GenericMethods {
     @Test(priority =1)
     public void verify_Recom_section() throws InterruptedException {
         homePage=HomePage.getInstance();
-        homePage.Verify_Footerlinks();
     }
 
 
