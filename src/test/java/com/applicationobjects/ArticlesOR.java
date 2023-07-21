@@ -1,7 +1,10 @@
 package com.applicationobjects;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
+
+import java.util.List;
 
 public class ArticlesOR {
     @FindBy(xpath="//li[@class='slide previous']/a/div/picture/img")
@@ -51,5 +54,28 @@ public class ArticlesOR {
 
     @FindBy(xpath="(//button[text()='SEE MORE'])[3]")
     public WebElement btn_otherarticles_seemore;
+
+    @FindAll(@FindBy(xpath = "(//div[contains(@class,'MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3')])[1]//parent::div//div//div//div[contains(@class,'MuiGrid-root MuiGrid-container')]"))
+    public List<WebElement> lst_art_af;
+
+    @FindAll(@FindBy(xpath = "(//div[contains(@class,'MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3')])[1]//parent::div//div//div//div[contains(@class,'MuiGrid-root MuiGrid-container')]"))
+    public List<WebElement> lst_art_bf;
+
+    @FindAll(@FindBy(xpath = "(//div[contains(@class,'MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3')])[2]//parent::div//div//div[contains(@class,'MuiGrid-root MuiGrid-grid-xs-6')]"))
+    public List<WebElement> lst_latestart_af;
+
+    @FindAll(@FindBy(xpath = "(//div[contains(@class,'MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3')])[2]//parent::div//div//div[contains(@class,'MuiGrid-root MuiGrid-grid-xs-6')]"))
+    public List<WebElement> lst_latestart_bf;
+
+    @FindAll(@FindBy(xpath = "//div[contains(@class,'MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-6 css-sayu3r')]//parent::div//div//div//div//div[contains(@class,'MuiGrid-root MuiGrid-grid-xs-12')]"))
+    public List<WebElement> lst_otherart_af;
+
+    @FindAll(@FindBy(xpath = "//div[contains(@class,'MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-6 css-sayu3r')]//parent::div//div//div//div//div[contains(@class,'MuiGrid-root MuiGrid-grid-xs-12')]"))
+    public List<WebElement> lst_otherart_bf;
+
+
+
+
+
 
 }

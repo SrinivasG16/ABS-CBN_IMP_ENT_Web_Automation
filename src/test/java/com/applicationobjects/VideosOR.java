@@ -1,7 +1,10 @@
 package com.applicationobjects;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
+
+import java.util.List;
 
 public class VideosOR {
 
@@ -49,6 +52,12 @@ public class VideosOR {
 
     @FindBy(xpath="//button[normalize-space()='VISIT IWTFC']")
     public WebElement btn_iWTFC_visitiwtfc;
+
+    @FindAll(@FindBy(xpath = "(//div[contains(@class,'MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-6 css-sayu3r')])[1]//parent::div//div//div//div//div[contains(@class,'MuiGrid-root MuiGrid-grid-xs-12')]"))
+    public List<WebElement> lst_videoart_af;
+
+    @FindAll(@FindBy(xpath = "(//div[contains(@class,'MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-6 css-sayu3r')])[1]//parent::div//div//div//div//div[contains(@class,'MuiGrid-root MuiGrid-grid-xs-12')]"))
+    public List<WebElement> lst_videoart_bf;
 
 
 }

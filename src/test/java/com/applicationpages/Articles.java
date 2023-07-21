@@ -3,7 +3,9 @@ package com.applicationpages;
 import com.applicationobjects.ArticlesOR;
 import com.applicationobjects.HomePageOR;
 import com.genericmethods.GenericMethods;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 public class Articles extends GenericMethods {
 
@@ -111,5 +113,77 @@ public class Articles extends GenericMethods {
     public void Verify_OtherArticles_SeeMore() {
         // Check the availability of the Push logo image on the Home page
         availableElement("Articels", "Other Articles", "See More", articlesOR.btn_otherarticles_seemore);
+    }
+    public void Verify_SeeMoreArticles_fun() throws InterruptedException {
+        // Retrieves the count of articles before clicking on "More Photos" button
+        int artCount_bf = articlesOR.lst_art_bf.size();
+        System.out.println("Before : " + artCount_bf);
+
+        // Clicks on the "See More" button
+        clickElement("Photos", "More Photos", articlesOR.btn_popular_seemore);
+        Thread.sleep(2000);
+
+        // Retrieves the count of articles after clicking on "See More" button
+        int artCount_af = articlesOR.lst_art_af.size();
+        System.out.println("After : " + artCount_af);
+
+        if (artCount_af != artCount_bf) {
+            System.out.println("See More button functionality working as expected");
+        } else {
+            Assert.assertNotEquals(artCount_af, artCount_bf, "See More button functionality not working as expected");
+        }
+    }
+    public void Verify_SeeMoreLatestArticles_fun() throws InterruptedException {
+        // Retrieves the count of articles before clicking on "More Photos" button
+        int artCount_bf = articlesOR.lst_latestart_bf.size();
+        System.out.println("Before : " + artCount_bf);
+
+        // Clicks on the "See More" button
+        clickElement("Photos", "More Photos", articlesOR.btn_latest_seemore);
+        Thread.sleep(2000);
+
+        // Retrieves the count of articles after clicking on "See More" button
+        int artCount_af = articlesOR.lst_latestart_af.size();
+        System.out.println("After : " + artCount_af);
+
+        if (artCount_af != artCount_bf) {
+            System.out.println("See More button functionality working as expected");
+        } else {
+            Assert.assertNotEquals(artCount_af, artCount_bf, "See More button functionality not working as expected");
+        }
+    }
+    public void Verify_SeeMoreOtherArticles_fun() throws InterruptedException {
+        // Retrieves the count of articles before clicking on "More Photos" button
+        int artCount_bf = articlesOR.lst_otherart_bf.size();
+        System.out.println("Before : " + artCount_bf);
+
+        // Clicks on the "See More" button
+        clickElement("Photos", "More Photos", articlesOR.btn_otherarticles_seemore);
+        Thread.sleep(2000);
+
+        // Retrieves the count of articles after clicking on "See More" button
+        int artCount_af = articlesOR.lst_otherart_af.size();
+        System.out.println("After : " + artCount_af);
+
+        if (artCount_af != artCount_bf) {
+            System.out.println("See More button functionality working as expected");
+        } else {
+            Assert.assertNotEquals(artCount_af, artCount_bf, "See More button functionality not working as expected");
+        }
+    }
+
+    public void Verify_innerArticles_fun() {
+        // Check the functionality of the "Videos" button in the "Latest" section on the Home page
+        clickElement("Articles", "Article", articlesOR.img_werecommend_fstarticle);
+    }
+    public void Navigate_To_Articleinner() {
+        // Clicks on the main article image in the "Photos" section
+        clickElement("Articles inner", "Main article", articlesOR.img_werecommend_fstarticle );
+
+        // Scrolls the window by a certain amount using JavaScriptExecutor
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,800)","");
+        js.executeScript("window.scrollBy(0,1200)","");
+        js.executeScript("window.scrollBy(0,2000)","");
     }
 }

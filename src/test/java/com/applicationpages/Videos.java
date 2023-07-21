@@ -4,6 +4,7 @@ import com.applicationobjects.PhotosOR;
 import com.applicationobjects.VideosOR;
 import com.genericmethods.GenericMethods;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 public class Videos extends GenericMethods {
 
@@ -101,5 +102,23 @@ public class Videos extends GenericMethods {
         // Check the availability of the Push logo image on the Home page
         availableElement("Home", "iWTFC", "Visit iWTFC", videosOR.btn_iWTFC_visitiwtfc);
     }
+    public void Verify_SeeMoreOtherArticles_fun() throws InterruptedException {
+        // Retrieves the count of articles before clicking on "More Photos" button
+        int artCount_bf = videosOR.lst_videoart_bf.size();
+        System.out.println("Before : " + artCount_bf);
 
+        // Clicks on the "See More" button
+        clickElement("Photos", "More Photos", videosOR.btn_videos_seemore);
+        Thread.sleep(2000);
+
+        // Retrieves the count of articles after clicking on "See More" button
+        int artCount_af = videosOR.lst_videoart_af.size();
+        System.out.println("After : " + artCount_af);
+
+        if (artCount_af != artCount_bf) {
+            System.out.println("See More button functionality working as expected");
+        } else {
+            Assert.assertNotEquals(artCount_af, artCount_bf, "See More button functionality not working as expected");
+        }
+    }
 }
