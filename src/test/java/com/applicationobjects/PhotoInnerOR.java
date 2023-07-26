@@ -21,7 +21,7 @@ public class PhotoInnerOR {
     public WebElement img_mainphoto_thumb;
 
     @FindBy(xpath="//div[contains(@class,'MuiBox-root')]//div[text()='Related']")
-    public WebElement img_related_section;
+    public WebElement txt_related_section;
 
     @FindBy(xpath="(//a[contains(@class,'MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone')]//div//picture//img)[1]")
     public WebElement img_related_frstphoto;
