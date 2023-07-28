@@ -17,45 +17,45 @@ public class TC_05_Photos_UI extends GenericMethods {
         js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
     }
 
-    @Description("Test: Verify availability of Main Photo section on the photos page")
     @Test(priority = 1)
+    @Description("Test: Verify availability of Main Photo section on the Photos page")
     public void verifyMainPhotoSection() throws InterruptedException {
         photos = Photos.getInstance();
         photos.Verify_MainPhotos_Section();
     }
 
-    @Description("Test: Verify availability of ENT logo in the Main Article on the home page")
     @Test(priority = 2)
+    @Description("Test: Verify availability of  Main Article on the Photos page")
     public void verifyMainArticle() throws InterruptedException {
         photos.Verify_MainArticle();
     }
 
-    @Description("Test: Verify availability of ENT logo in the We Recommended section on the home page")
     @Test(priority = 3)
+    @Description("Test: Verify availability of We Recommended section on the Photos page")
     public void verifyWeRecommendedSection() throws InterruptedException {
         photos.Verify_Werecommended_Section();
     }
 
-    @Description("Test: Verify availability of ENT logo in the First Article of We Recommended section on the home page")
     @Test(priority = 4)
+    @Description("Test: Verify availability of the First Article in the We Recommended section on the Photos page")
     public void verifyFirstArticleWeRecommended() throws InterruptedException {
         photos.Verify_frstArticle_Werecommended();
     }
 
-    @Description("Test: Verify availability of ENT logo in the Photos section on the home page")
     @Test(priority = 5)
+    @Description("Test: Verify availability of the Photos section on the Photos page")
     public void verifyPhotosSection() throws InterruptedException {
         photos.Verify_photos_section();
     }
 
-    @Description("Test: Verify availability of ENT logo in the First Article of Photos section on the home page")
     @Test(priority = 6)
+    @Description("Test: Verify availability of the First Article in the Photos section on the Photos page")
     public void verifyFirstArticlePhotos() throws InterruptedException {
         photos.Verify_frstAticle_photos();
     }
 
-    @Description("Test: Verify See More photos functionality on the home page")
     @Test(priority = 7)
+    @Description("Test: Verify 'See More photos' availability on the Photos page")
     public void verifySeeMorePhotos() throws InterruptedException {
         photos.Verify_SeeMore_photos();
     }

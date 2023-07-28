@@ -17,20 +17,23 @@ public class TC_09_Articles_fun extends GenericMethods {
             JavascriptExecutor js = (JavascriptExecutor) driver;
             js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
         }
-    @Description("Verification for availability of ENT logo on the home page")
-    @Test(priority =1)
+    @Test(priority = 1)
+    @Description("Verify the 'See More' functionality for articles on the Articles page")
     public void verify_SeeMoreArticles_fun() throws InterruptedException {
-        articles= Articles.getInstance();
+        articles = Articles.getInstance();
         articles.Verify_SeeMoreArticles_fun();
     }
-    @Description("Verification for availability of ENT logo on the home page")
-    @Test(priority =1)
+
+    @Test(priority = 2)
+    @Description("Verify the 'See More' functionality for latest articles on the Articles page")
     public void verify_SeeMoreLatestArticles_fun() throws InterruptedException {
         articles.Verify_SeeMoreLatestArticles_fun();
     }
-    @Description("Verification for availability of ENT logo on the home page")
-    @Test(priority =1)
+
+    @Test(priority = 3)
+    @Description("Verify the 'See More' functionality for other articles on the Articles page")
     public void verify_SeeMoreOtherArticles_fun() throws InterruptedException {
         articles.Verify_SeeMoreOtherArticles_fun();
     }
+
 }

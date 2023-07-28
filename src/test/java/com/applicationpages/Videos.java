@@ -58,6 +58,11 @@ public class Videos extends GenericMethods {
         availableElement("Home", "Main Exclusive videos", "See More", videosOR.btn_mainexcusive_seeMore);
     }
 
+    public void Verify_MainExclusive_Hashtag() {
+        // Check the availability of the Push logo image on the Home page
+        availableElement("Home", "Main Exclusive videos", "Hash tag", videosOR.btn_mainvideo_hashtag);
+    }
+
     public void Verify_MainExclusive_Sociallinks() {
         // Check the availability of the Push logo image on the Home page
         availableElement("Home", "Main Exclusive videos", "FB", videosOR.btn_mainvideo_fb);

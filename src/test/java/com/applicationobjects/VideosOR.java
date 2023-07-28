@@ -35,6 +35,9 @@ public class VideosOR {
     @FindBy(xpath="//div[@data-testid='text-0']")
     public WebElement lnk_mainexcusive_frst_video;
 
+    @FindBy(xpath="//button[normalize-space()='#']")
+    public WebElement btn_mainvideo_hashtag;
+
     @FindBy(xpath="(//button[text()='SEE MORE'])[1]")
     public WebElement btn_mainexcusive_seeMore;
 

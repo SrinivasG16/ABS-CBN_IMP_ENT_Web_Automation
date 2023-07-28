@@ -21,29 +21,33 @@ public class TC_14_VideosInner_UI extends GenericMethods {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
     }
-    @Description("Verification for availability of ENT logo on the home page")
-    @Test(priority =1)
+    @Test(priority = 1)
+    @Description("Verify the availability of the main video frame on the Videos inner page")
     public void verify_MainVideoFrame() throws InterruptedException {
         videosInnerPage = VideosInnerPage.getInstance();
         videosInnerPage.Verify_MainVideo_frame();
     }
-    @Description("Verification for availability of ENT logo on the home page")
-    @Test(priority =1)
+
+    @Test(priority = 2)
+    @Description("Verify the availability of social links in the Main Video section on the Videos inner page")
     public void verify_MainVideoSocialLinks() throws InterruptedException {
         videosInnerPage.Verify_MainVideo_sociallnks();
     }
-    @Description("Verification for availability of ENT logo on the home page")
-    @Test(priority =1)
+
+    @Test(priority = 3)
+    @Description("Verify the availability of the Main Video image on the Videos inner page")
     public void verify_MainVideoImage() throws InterruptedException {
         videosInnerPage.Verify_MainVideo_Image();
     }
-    @Description("Verification for availability of ENT logo on the home page")
-    @Test(priority =1)
+
+    @Test(priority = 4)
+    @Description("Verify the availability of the Related Video Section on the Videos inner page")
     public void verify_RelatedVideoSection() throws InterruptedException {
         videosInnerPage.Verify_RelatedVideo_Section();
     }
-    @Description("Verification for availability of ENT logo on the home page")
-    @Test(priority =1)
+
+    @Test(priority = 5)
+    @Description("Verify the availability of the first video in the Related Video Section on the Videos inner page")
     public void verify_RelatedFirstVideo() throws InterruptedException {
         videosInnerPage.Verify_Related_FirstVideo();
     }

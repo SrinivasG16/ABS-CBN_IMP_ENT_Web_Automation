@@ -17,7 +17,7 @@ public class TC_07_Photos_fun extends GenericMethods {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
     }
-    @Description("Verification for availability of ENT logo on the home page")
+    @Description("Verify the functionality of See more button in photos section")
     @Test(priority =1)
     public void verify_SeeMorePhotos_fun() throws InterruptedException {
         photos= Photos.getInstance();
