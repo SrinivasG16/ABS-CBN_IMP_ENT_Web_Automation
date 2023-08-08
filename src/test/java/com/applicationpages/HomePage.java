@@ -47,37 +47,37 @@ public class HomePage extends GenericMethods {
     }
     public void Verify_hdr_photos() {
         // Check the availability of the header photos link on the Home page
-        availableImage("Home", "Header", "photos", homePageOR.lnk_hdr_photos);
+        availableElement("Home", "Header", "photos", homePageOR.lnk_hdr_photos);
     }
 
     public void Verify_hdr_videos() {
         // Check the availability of the header videos link on the Home page
-        availableImage("Home", "Header", "videos", homePageOR.lnk_hdr_videos);
+        availableElement("Home", "Header", "videos", homePageOR.lnk_hdr_videos);
     }
 
     public void Verify_hdr_Articles() {
         // Check the availability of the header Articles link on the Home page
-        availableImage("Home", "Header", "Articles", homePageOR.lnk_hdr_articles);
+        availableElement("Home", "Header", "Articles", homePageOR.lnk_hdr_articles);
     }
     public void Verify_hdr_shows() {
         // Check the availability of the header shows link on the Home page
-        availableImage("Home", "Header", "shows", homePageOR.lnk_hdr_shows);
+        availableElement("Home", "Header", "shows", homePageOR.lnk_hdr_shows);
     }
     public void Verify_hdr_schedule() {
         // Check the availability of the header Schedule link on the Home page
-        availableImage("Home", "Header", "Schedule", homePageOR.lnk_hdr_schedule);
+        availableElement("Home", "Header", "Schedule", homePageOR.lnk_hdr_schedule);
     }
     public void Verify_hdr_kapailya() {
         // Check the availability of the header Schedule link on the Home page
-        availableImage("Home", "Header", "kapailya", homePageOR.lnk_hdr_kapamilya);
+        availableElement("Home", "Header", "kapailya", homePageOR.lnk_hdr_kapamilya);
     }
     public void Verify_hdr_getTickets() {
         // Check the availability of the header Get tickets link on the Home page
-        availableImage("Home", "Header", "Get tickets", homePageOR.lnk_hdr_gettickets);
+        availableElement("Home", "Header", "Get tickets", homePageOR.lnk_hdr_gettickets);
     }
     public void Verify_hdr_Search() {
         // Check the availability of the header Search on the Home page
-        availableImage("Home", "Header", "Search", homePageOR.lnk_hdr_search);
+        availableElement("Home", "Header", "Search", homePageOR.lnk_hdr_search);
     }
 
     // This method navigates to the "Photos" section of the website.
@@ -177,8 +177,8 @@ public class HomePage extends GenericMethods {
 
         // Check the availability of the Social media icons in the carousel on the Home page
         availableElement("Home", "Carousel", "facebook", homePageOR.btn_social_fb);
-        availableElement("Home", "Carousel", "facebook", homePageOR.btn_social_twitter);
-        availableElement("Home", "Carousel", "facebook", homePageOR.btn_social_viber);
+        availableElement("Home", "Carousel", "twitter", homePageOR.btn_social_twitter);
+        availableElement("Home", "Carousel", "viber", homePageOR.btn_social_viber);
     }
 
     public void Verify_upcoming_section() {
@@ -397,10 +397,10 @@ public class HomePage extends GenericMethods {
         // Check the availability of the "Videos" button in the "Latest" section on the Home page
         availableElement("Home", "Latest", "Videos", homePageOR.btn_latest_videos);
     }
-    public void Verify_Latest_Videos_fun() {
-        // Check the functionality of the "Videos" button in the "Latest" section on the Home page
-        clickElement("Home", "Photos button", homePageOR.btn_latest_videos);
-    }
+        public void Verify_Latest_Videos_fun() {
+            // Check the functionality of the "Videos" button in the "Latest" section on the Home page
+            clickElement("Home", "Photos button", homePageOR.btn_latest_videos);
+        }
     public void Verify_SeeMoreVideos_Latest_fun() {
         // Click "See more" button in Latest section in "Videos" field on the Home page
         clickElement("Home", "See more button", homePageOR.btn_latest_seemore);
@@ -514,10 +514,11 @@ public class HomePage extends GenericMethods {
 
         // Create a list to store the corresponding expected social media titles
         List socialtitle = new ArrayList();
-        socialtitle.add("Push - Home | Facebook");
-        socialtitle.add("Push (@pushalerts) • Instagram photos and videos");
-        socialtitle.add("PUSH ALERTS (@Push_Alerts) / Twitter");
-        socialtitle.add("Push - YouTube");
+        socialtitle.add("https://www.facebook.com/ABSCBNnetwork");
+        socialtitle.add("https://www.instagram.com/abscbn/");
+        socialtitle.add("https://twitter.com/ABSCBN");
+        socialtitle.add("https://www.youtube.com/user/ABSCBNOnline");
+        socialtitle.add("https://www.tiktok.com/");
 
         // Iterate over the social follow icons
         for (int i = 0; i < socialfollow.size(); i++) {
@@ -528,7 +529,7 @@ public class HomePage extends GenericMethods {
             switchwindow();
 
             // Get the title of the current web page
-            String actURL = driver.getTitle();
+            String actURL = driver.getCurrentUrl();
 
             // Get the expected social media title corresponding to the current social follow icon
             String expURL = socialtitle.get(i).toString();
@@ -682,6 +683,21 @@ public class HomePage extends GenericMethods {
 
         // Perform all accumulated assertions and fail the test if any of the assertions failed
         softAssert.assertAll();
+    }
+
+    public void verify_photos_hdrLink_fun(){
+        // Click on the current footer link
+        clickElement("Home", "photos", homePageOR.lnk_hdr_photos);
+    }
+
+    public void verify_article_hdrLink_fun(){
+        // Click on the current footer link
+        clickElement("Home", "article", homePageOR.lnk_hdr_articles);
+    }
+
+    public void verify_videos_hdrLink_fun(){
+        // Click on the current footer link
+        clickElement("Home", "videos", homePageOR.lnk_hdr_videos);
     }
 
 }

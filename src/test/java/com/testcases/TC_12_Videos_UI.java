@@ -1,13 +1,12 @@
 package com.testcases;
 
-import com.applicationpages.Articles;
 import com.applicationpages.Videos;
 import com.genericmethods.GenericMethods;
 import io.qameta.allure.Description;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Test;
 
-public class TC_10_Videos_UI extends GenericMethods {
+public class TC_12_Videos_UI extends GenericMethods {
 
     Videos videos;
 

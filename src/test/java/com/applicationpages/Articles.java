@@ -4,8 +4,13 @@ import com.applicationobjects.ArticlesOR;
 import com.applicationobjects.HomePageOR;
 import com.genericmethods.GenericMethods;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Articles extends GenericMethods {
 
@@ -185,5 +190,53 @@ public class Articles extends GenericMethods {
         js.executeScript("window.scrollBy(0,800)","");
         js.executeScript("window.scrollBy(0,1200)","");
         js.executeScript("window.scrollBy(0,2000)","");
+    }
+    public void Verify_Social_share_fun() throws InterruptedException {
+        // Creating an instance of SoftAssert for assertion purposes
+        SoftAssert softAssert = new SoftAssert();
+
+        // Creating a list to store social share elements
+        List socialshare = new ArrayList();
+        socialshare.add(articlesOR.btn_mainarticle_fb); // Adding Facebook share element
+        socialshare.add(articlesOR.btn_mainarticle_twitter); // Adding Twitter share element
+        // socialshare.add(freshScoopsArticleOR.icn_vbr_share); // (Commented out) Adding Viber share element
+
+        // Creating a list to store expected social media titles
+        List socialtitle = new ArrayList();
+        socialtitle.add("Facebook"); // Adding expected title for Facebook
+        socialtitle.add("Compose new Tweet / Twitter"); // Adding expected title for Twitter
+        // socialtitle.add("Viber"); // (Commented out) Adding expected title for Viber
+
+        // Iterating over the socialshare list
+        for (int i = 0; i < socialshare.size(); i++) {
+            // Clicking on the social follow icon
+            clickElement("Fresh scoops article inner", "Social Follow icons", (WebElement) socialshare.get(i));
+            // Switching to the new window
+            switchwindow();
+            Thread.sleep(2000);
+
+            // Getting the actual title of the current page
+            String actURL = driver.getTitle();
+            // Getting the expected title from the socialtitle list
+            String expURL = socialtitle.get(i).toString();
+            System.out.println("Title: " + actURL);
+
+            // Checking if the expected title contains the actual title
+            if (expURL.contains(actURL)) {
+                System.out.println(actURL + " Social share Functionality is working as expected on the photos page");
+            } else {
+                // Asserting that the actual title is equal to the expected title
+                softAssert.assertEquals(actURL, expURL, "Section page functionality not working as expected on the photos page");
+            }
+
+            // Closing the current window
+            driver.close();
+            Thread.sleep(5000);
+            // Switching back to the parent window
+            driver.switchTo().window(Parent);
+        }
+
+        // Asserting all the soft assertions
+        softAssert.assertAll();
     }
 }

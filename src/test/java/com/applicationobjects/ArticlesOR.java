@@ -13,7 +13,7 @@ public class ArticlesOR {
     @FindBy(xpath="(//div[text()='Articles'])[2]")
     public WebElement txt_mainarticle_section;
 
-    @FindBy(xpath="( //button[@aria-label='facebook']//*[name()='svg']//*[name()='path' and contains(@d,'M22 12c0-5')]")
+    @FindBy(xpath="//button[@aria-label='facebook']//*[name()='svg']//*[name()='path' and contains(@d,'M22 12c0-5')]")
     public WebElement btn_mainarticle_fb;
 
     @FindBy(xpath="//button[@aria-label='twitter']//*[name()='svg']//*[name()='path' and contains(@d,'M22.46 6c-')]")

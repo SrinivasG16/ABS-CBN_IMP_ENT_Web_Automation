@@ -1,14 +1,13 @@
 package com.testcases;
 
 import com.applicationobjects.PhotoInnerOR;
-import com.applicationpages.ArticleInnerPage;
 import com.applicationpages.PhotosInnerPage;
 import com.genericmethods.GenericMethods;
 import io.qameta.allure.Description;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Test;
 
-public class TC_13_PhotosInner_UI extends GenericMethods {
+public class TC_16_PhotosInner_UI extends GenericMethods {
 
     PhotosInnerPage photosInnerPage;
 

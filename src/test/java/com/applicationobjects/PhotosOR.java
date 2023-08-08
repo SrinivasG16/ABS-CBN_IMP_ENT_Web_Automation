@@ -13,6 +13,15 @@ public class PhotosOR {
     @FindBy(xpath="//li[@class='slide previous']/div/div/picture/img")
     public WebElement img_mainarticle;
 
+    @FindBy(xpath="//button[@aria-label='facebook']//*[name()='svg']")
+    public WebElement btn_mainphoto_fb;
+
+    @FindBy(xpath="//button[@aria-label='twitter']//*[name()='svg']//*[name()='path' and contains(@d,'M22.46 6c-')]")
+    public WebElement btn_mainphoto_twitter;
+
+    @FindBy(xpath="//*[name()='path' and contains(@d,'M10.7809 0')]")
+    public WebElement btn_mainphoto_viber;
+
     @FindBy(xpath="//div[text()='We Recommend']")
     public WebElement txt_werecommend;
 

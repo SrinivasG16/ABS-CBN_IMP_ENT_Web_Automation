@@ -1,14 +1,18 @@
 package com.testcases;
 
+import com.applicationpages.Articles;
+import com.applicationpages.HomePage;
 import com.applicationpages.Videos;
 import com.genericmethods.GenericMethods;
 import io.qameta.allure.Description;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Test;
 
-public class TC_11_Videos_fun extends GenericMethods {
+public class TC_14_Videos_SocialShare_fun extends GenericMethods {
 
     Videos videos;
+
+    HomePage homePage;
 
     @Description("Launching the browser")
     @Test(priority =0)
@@ -16,11 +20,13 @@ public class TC_11_Videos_fun extends GenericMethods {
         launchBrowser();
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+        homePage = HomePage.getInstance();
+        homePage.verify_article_hdrLink_fun();
     }
-    @Description("Test: Verify See More Videos functionality")
     @Test(priority = 1)
-    public void verifySeeMoreVideos() throws InterruptedException {
+    @Description("Verify the availability of the Main article on the Articles page")
+    public void verify_MainArticle_SocialShare_fun() throws InterruptedException {
         videos = Videos.getInstance();
-        videos.Verify_SeeMoreVideos_fun();
+        videos.Verify_Social_share_fun();
     }
 }

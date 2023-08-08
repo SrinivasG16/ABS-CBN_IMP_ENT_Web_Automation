@@ -1,13 +1,12 @@
 package com.testcases;
 
 import com.applicationpages.Articles;
-import com.applicationpages.Photos;
 import com.genericmethods.GenericMethods;
 import io.qameta.allure.Description;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Test;
 
-public class TC_08_Articles_UI extends GenericMethods {
+public class TC_09_Articles_UI extends GenericMethods {
 
     Articles articles;
 

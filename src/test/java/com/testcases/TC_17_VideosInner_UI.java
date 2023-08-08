@@ -1,14 +1,13 @@
 package com.testcases;
 
 import com.applicationobjects.VideosInnerOR;
-import com.applicationpages.PhotosInnerPage;
 import com.applicationpages.VideosInnerPage;
 import com.genericmethods.GenericMethods;
 import io.qameta.allure.Description;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Test;
 
-public class TC_14_VideosInner_UI extends GenericMethods {
+public class TC_17_VideosInner_UI extends GenericMethods {
 
       VideosInnerPage videosInnerPage;
 

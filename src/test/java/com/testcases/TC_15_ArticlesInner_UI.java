@@ -1,13 +1,12 @@
 package com.testcases;
 
 import com.applicationpages.ArticleInnerPage;
-import com.applicationpages.Articles;
 import com.genericmethods.GenericMethods;
 import io.qameta.allure.Description;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Test;
 
-public class TC_12_ArticlesInner_UI extends GenericMethods {
+public class TC_15_ArticlesInner_UI extends GenericMethods {
 
     ArticleInnerPage articleInnerPage;
 

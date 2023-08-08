@@ -100,127 +100,127 @@ public class TC_01_Verify_HomePage_UI extends GenericMethods {
         homePage.Verify_upcoming_thumbnail();
     }
     @Description("Verification for availability of upcoming section on the Home page")
-    @Test(priority =15)
+    @Test(priority =16)
     public void verify_popularSection() throws InterruptedException {
         homePage.Verify_popular_section();
     }
     @Description("Verification for availability of upcoming section on the Home page")
-    @Test(priority =15)
+    @Test(priority =17)
     public void verify_Articlebtn_popularSection() throws InterruptedException {
         homePage.Verify_Articlebutton_popular();
     }
     @Description("Verification for availability of upcoming section on the Home page")
-    @Test(priority =15)
+    @Test(priority =18)
     public void verify_FirstArticle_popularSection() throws InterruptedException {
         homePage.Verify_FirstArticle_popular();
     }
     @Description("Verification for availability of upcoming section on the Home page")
-    @Test(priority =15)
+    @Test(priority =19)
     public void verify_SeeMoreArticle_popularSection() throws InterruptedException {
         homePage.Verify_SeeMoreArticles_popular();
     }
     @Description("Verification for availability of upcoming section on the Home page")
-    @Test(priority =15)
+    @Test(priority =20)
     public void verify_PhotosButton_popularSection() throws InterruptedException {
         homePage.Verify_Photosbutton_popular();
     }
     @Description("Verification for availability of upcoming section on the Home page")
-    @Test(priority =15)
+    @Test(priority =21)
     public void verify_FirstPhoto_popularSection() throws InterruptedException {
         homePage.Verify_FirstPhoto_popular();
     }
     @Description("Verification for availability of upcoming section on the Home page")
-    @Test(priority =15)
+    @Test(priority =22)
     public void verify_Video_popularSection() throws InterruptedException {
         homePage.Verify_Videosbutton_popular();
     }
     @Description("Verification for availability of upcoming section on the Home page")
-    @Test(priority =15)
+    @Test(priority =23)
     public void verify_FirstVideo_popularSection() throws InterruptedException {
         homePage.Verify_Firstvideo_popular();
     }
     @Description("Verification for availability of upcoming section on the Home page")
-    @Test(priority =15)
+    @Test(priority =24)
     public void verify_kapamilyaChatSection() throws InterruptedException {
         homePage.Verify_KapamilyaChat();
     }
     @Description("Verification for availability of upcoming section on the Home page")
-    @Test(priority =15)
+    @Test(priority =25)
     public void verify_SeeMore_kapamilyaChatSection() throws InterruptedException {
         homePage.Verify_KapamilyaChat_seeMore();
     }
     @Description("Verification for availability of upcoming section on the Home page")
-    @Test(priority =15)
+    @Test(priority =26)
     public void verify_firstThumb_kapamilyaChatSection() throws InterruptedException {
         homePage.Verify_KapamilyaChat_firstThumb();
     }
     @Description("Verification for availability of upcoming section on the Home page")
-    @Test(priority =15)
+    @Test(priority =27)
     public void verify_watchNow_kapamilyaChatSection() throws InterruptedException {
         homePage.Verify_KapamilyaChat_watchNowBtn();
     }
     @Description("Verification for availability of upcoming section on the Home page")
-    @Test(priority =15)
+    @Test(priority =28)
     public void verify_firstslide_kapamilyaChatSection() throws InterruptedException {
         homePage.Verify_KapamilyaChat_firstSlideItem();
     }
     @Description("Verification for availability of upcoming section on the Home page")
-    @Test(priority =15)
+    @Test(priority =29)
     public void verify_ExclusiveVideos() throws InterruptedException {
         homePage.Verify_ExclusiveVideos_section();
     }
     @Description("Verification for availability of upcoming section on the Home page")
-    @Test(priority =15)
+    @Test(priority =30)
     public void verify_First_ExclusiveVideos() throws InterruptedException {
         homePage.Verify_ExclusiveVideos_firstVideo();
     }
     @Description("Verification for availability of upcoming section on the Home page")
-    @Test(priority =15)
+    @Test(priority =31)
     public void verify_SeeMore_ExclusiveVideos() throws InterruptedException {
         homePage.Verify_ExclusiveVideos_seeMore();
     }
     @Description("Verification for availability of upcoming section on the Home page")
-    @Test(priority =15)
+    @Test(priority =32)
     public void verify_LatestSection() throws InterruptedException {
         homePage.Verify_Latest_Section();
     }
     @Description("Verification for availability of upcoming section on the Home page")
-    @Test(priority =15)
+    @Test(priority =33)
     public void verify_Article_LatestSection() throws InterruptedException {
         homePage.Verify_Latest_Article();
     }
     @Description("Verification for availability of upcoming section on the Home page")
-    @Test(priority =15)
+    @Test(priority =34)
     public void verify_SeeMore_LatestSection() throws InterruptedException {
         homePage.Verify_Latest_SeeMore();
     }
     @Description("Verification for availability of upcoming section on the Home page")
-    @Test(priority =15)
+    @Test(priority =35)
     public void verify_photos_LatestSection() throws InterruptedException {
         homePage.Verify_Latest_Photos();
     }
     @Description("Verification for availability of upcoming section on the Home page")
-    @Test(priority =15)
+    @Test(priority =36)
     public void verify_videos_LatestSection() throws InterruptedException {
         homePage.Verify_Latest_Videos();
     }
     @Description("Verification for availability of upcoming section on the Home page")
-    @Test(priority =15)
+    @Test(priority =37)
     public void verify_PushLogo() throws InterruptedException {
         homePage.Verify_PushLogo();
     }
     @Description("Verification for availability of upcoming section on the Home page")
-    @Test(priority =15)
+    @Test(priority =38)
     public void verify_Forst_Push() throws InterruptedException {
         homePage.Verify_First_Push();
     }
     @Description("Verification for availability of upcoming section on the Home page")
-    @Test(priority =15)
+    @Test(priority =39)
     public void verify_VisitPush() throws InterruptedException {
         homePage.Verify_VisitPush();
     }
     @Description("Verification for availability of upcoming section on the Home page")
-    @Test(priority =15)
+    @Test(priority =40)
     public void verify_iWTFC() throws InterruptedException {
         homePage.Verify_iWTFC();
     }
@@ -230,37 +230,37 @@ public class TC_01_Verify_HomePage_UI extends GenericMethods {
         homePage.Verify_FirstVideo_iWTFC();
     }
     @Description("Verification for availability of upcoming section on the Home page")
-    @Test(priority =15)
+    @Test(priority =41)
     public void verify_VisitiWTFC_iWTFC() throws InterruptedException {
         homePage.Verify_VisitiWTFC();
     }
     @Description("Verification for availability of upcoming section on the Home page")
-    @Test(priority =15)
+    @Test(priority =42)
     public void verify_Socialmedia_footer() throws InterruptedException {
         homePage.Verify_Footer_SocialLinks();
     }
     @Description("Verification for availability of upcoming section on the Home page")
-    @Test(priority =15)
+    @Test(priority =43)
     public void verify_About_footer() throws InterruptedException {
         homePage.Verify_Footer_Aboutlnk();
     }
     @Description("Verification for availability of upcoming section on the Home page")
-    @Test(priority =15)
+    @Test(priority =44)
     public void verify_privacyPolicy_footer() throws InterruptedException {
         homePage.Verify_Footer_PrivacyPolicy();
     }
     @Description("Verification for availability of upcoming section on the Home page")
-    @Test(priority =15)
+    @Test(priority =45)
     public void verify_TermsOfUse_footer() throws InterruptedException {
         homePage.Verify_Footer_TermsOfUse();
     }
     @Description("Verification for availability of upcoming section on the Home page")
-    @Test(priority =15)
+    @Test(priority =46)
     public void verify_Contacts_footer() throws InterruptedException {
         homePage.Verify_Footer_Contacts();
     }
     @Description("Verification for availability of upcoming section on the Home page")
-    @Test(priority =15)
+    @Test(priority =47)
     public void verify_Careers_footer() throws InterruptedException {
         homePage.Verify_Footer_Careers();
     }

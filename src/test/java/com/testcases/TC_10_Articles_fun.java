@@ -6,7 +6,7 @@ import io.qameta.allure.Description;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Test;
 
-public class TC_09_Articles_fun extends GenericMethods {
+public class TC_10_Articles_fun extends GenericMethods {
 
     Articles articles;
 
