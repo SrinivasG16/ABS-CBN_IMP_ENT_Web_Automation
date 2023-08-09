@@ -7,10 +7,9 @@ import io.qameta.allure.Description;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Test;
 
-public class TC_17_VideosInner_UI extends GenericMethods {
+public class TC_19_VideosInner_UI extends GenericMethods {
 
       VideosInnerPage videosInnerPage;
-
       VideosInnerOR videosInnerOR;
 
     @Description("Launching the browser")

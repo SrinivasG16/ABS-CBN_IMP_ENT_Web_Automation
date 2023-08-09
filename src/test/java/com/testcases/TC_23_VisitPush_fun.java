@@ -5,7 +5,7 @@ import com.genericmethods.GenericMethods;
 import io.qameta.allure.Description;
 import org.testng.annotations.Test;
 
-public class TC_04_Socialfollow_fun extends GenericMethods {
+public class TC_23_VisitPush_fun extends GenericMethods {
 
     HomePage homePage;
 
@@ -15,9 +15,11 @@ public class TC_04_Socialfollow_fun extends GenericMethods {
         launchBrowser();
         manageCookies();
     }
+
     @Description("Verification for Functionality of Footer links on the home page")
     @Test(priority =1)
-    public void verify_socialFollow_fun() throws InterruptedException {
-        homePage.Verify_Social_follow_fun();
+    public void verify_VisitPush_fun() throws InterruptedException {
+        homePage=HomePage.getInstance();
+        homePage.Verify_VisitPush_fun();
     }
 }

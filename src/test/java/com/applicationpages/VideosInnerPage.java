@@ -4,9 +4,14 @@ import com.applicationobjects.Article_innerOR;
 import com.applicationobjects.VideosInnerOR;
 import com.genericmethods.GenericMethods;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class VideosInnerPage extends GenericMethods {
 
@@ -167,7 +172,7 @@ public class VideosInnerPage extends GenericMethods {
         }
     }
 
-    public void     Verify_yt_Video_Maximise(){
+    public void Verify_yt_Video_Maximise(){
         // Move the mouse pointer to the "ply_yt_player" element
         act.moveToElement(videosInnerOR.vdo_playingvideo).perform();
 
@@ -209,6 +214,54 @@ public class VideosInnerPage extends GenericMethods {
             // Assert that the min value is "Full screen", indicating that the video is unable to be minimised
             Assert.assertEquals(val, "Full screen", "Unable to Minimise the video");
         }
+    }
+    public void Verify_Social_share_fun() throws InterruptedException {
+        // Creating an instance of SoftAssert for assertion purposes
+        SoftAssert softAssert = new SoftAssert();
+
+        // Creating a list to store social share elements
+        List socialshare = new ArrayList();
+        socialshare.add(videosInnerOR.btn_mainvideo_fb); // Adding Facebook share element
+        socialshare.add(videosInnerOR.btn_mainvideo_twitter); // Adding Twitter share element
+        // socialshare.add(freshScoopsArticleOR.icn_vbr_share); // (Commented out) Adding Viber share element
+
+        // Creating a list to store expected social media titles
+        List socialtitle = new ArrayList();
+        socialtitle.add("Facebook"); // Adding expected title for Facebook
+        socialtitle.add("Compose new Tweet / Twitter"); // Adding expected title for Twitter
+        // socialtitle.add("Viber"); // (Commented out) Adding expected title for Viber
+
+        // Iterating over the socialshare list
+        for (int i = 0; i < socialshare.size(); i++) {
+            // Clicking on the social follow icon
+            clickElement("Fresh scoops article inner", "Social Follow icons", (WebElement) socialshare.get(i));
+            // Switching to the new window
+            switchwindow();
+            Thread.sleep(2000);
+
+            // Getting the actual title of the current page
+            String actURL = driver.getTitle();
+            // Getting the expected title from the socialtitle list
+            String expURL = socialtitle.get(i).toString();
+            System.out.println("Title: " + actURL);
+
+            // Checking if the expected title contains the actual title
+            if (expURL.contains(actURL)) {
+                System.out.println(actURL + " Section page Functionality is working as expected on the Fresh scoops article inner page");
+            } else {
+                // Asserting that the actual title is equal to the expected title
+                softAssert.assertEquals(actURL, expURL, "Section page functionality not working as expected on the Fresh scoops article inner page");
+            }
+
+            // Closing the current window
+            driver.close();
+            Thread.sleep(5000);
+            // Switching back to the parent window
+            driver.switchTo().window(Parent);
+        }
+
+        // Asserting all the soft assertions
+        softAssert.assertAll();
     }
 
 }

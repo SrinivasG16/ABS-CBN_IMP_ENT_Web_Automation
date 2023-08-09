@@ -55,6 +55,10 @@ public class Photos extends GenericMethods {
         // Check the availability of the Push logo image on the Home page
         availableImage("Home", "we recommended", "first article", photosOR.img_frst_werecommend);
     }
+    public void Verify_frstArticle_Werecommended_fun() {
+        // Check the availability of the Push logo image on the Home page
+        clickElement("Photos", "More Photos", photosOR.img_frst_werecommend);
+    }
     public void Verify_photos_section() {
         // Check the availability of the Push logo image on the Home page
         availableImage("Home", "Photos", "Photos", photosOR.txt_photos_section);

@@ -57,6 +57,10 @@ public class Videos extends GenericMethods {
         // Check the availability of the Push logo image on the Home page
         availableElement("Home", "Main Exclusive videos", "Main Exclusive videos", videosOR.lnk_mainexcusive_frst_video);
     }
+    public void Verify_MainExclusive_FirstVideo_fun() {
+        // Check the availability of the Push logo image on the Home page
+        clickElement("Video Page", "first video", videosOR.lnk_mainexcusive_frst_video);
+    }
 
     public void Verify_MainExclusive_SeeMore() {
         // Check the availability of the Push logo image on the Home page
@@ -277,6 +281,25 @@ public class Videos extends GenericMethods {
         } else {
             Assert.assertNotEquals(artCount_af, artCount_bf, "See More button functionality not working as expected");
         }
+    }
+    public void Verify_VisitiWTFC_fun() {
+        // Click "Visit iWTFC" button in iWTFC section on the Home page
+        clickElement("Home", "Visit iWTFC", videosOR.btn_iWTFC_visitiwtfc);
+
+        // Get the current URL of the web page
+        String actURL = driver.getCurrentUrl();
+
+        // Define the expected URL
+        String expURL = "https://www.iwanttfc.com/#!/";
+
+        // Check if the actual URL matches the expected URL
+        if (actURL.equals(expURL)) {
+            System.out.println("Visit iWTFC Functionality is working as expected");
+        } else {
+            // If the URLs don't match, fail the test and provide an error message
+            Assert.assertEquals(actURL,expURL,"Visit iWTFC functionality not working as expected");
+        }
+
     }
     public void Verify_Social_share_fun() throws InterruptedException {
         // Creating an instance of SoftAssert for assertion purposes

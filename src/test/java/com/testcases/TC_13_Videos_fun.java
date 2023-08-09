@@ -23,4 +23,11 @@ public class TC_13_Videos_fun extends GenericMethods {
         videos = Videos.getInstance();
         videos.Verify_SeeMoreVideos_fun();
     }
+
+    @Description("Test: Verify visit IWTFC functionality")
+    @Test(priority = 1)
+    public void verifyIWTFC_fun() throws InterruptedException {
+        videos = Videos.getInstance();
+        videos.Verify_VisitiWTFC_fun();
+    }
 }

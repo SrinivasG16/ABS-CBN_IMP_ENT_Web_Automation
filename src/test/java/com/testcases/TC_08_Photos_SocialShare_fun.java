@@ -11,7 +11,6 @@ import org.testng.annotations.Test;
 public class TC_08_Photos_SocialShare_fun extends GenericMethods {
 
     Photos photos;
-
     HomePage homePage;
 
     @Description("Launching the browser")

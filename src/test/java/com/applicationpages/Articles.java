@@ -74,6 +74,10 @@ public class Articles extends GenericMethods {
         // Check the availability of the Push logo image on the Home page
         availableImage("Articels", "We Recommend", "First Article", articlesOR.img_werecommend_fstarticle);
     }
+    public void verify_WeRecommend_FirstArticle_fun(){
+        // Click on the current footer link
+        clickElement("Articels", "First Article", articlesOR.img_werecommend_fstarticle);
+    }
 
     public void Verify_Popular_section() {
         // Check the availability of the Push logo image on the Home page
